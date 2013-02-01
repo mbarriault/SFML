@@ -475,7 +475,7 @@
     if (*m_fullscreenMode != sf::VideoMode()) {
         CGLContextObj cgcontext = (CGLContextObj)[context CGLContextObj];
         
-        GLint dim[2] = {m_fullscreenMode->width, m_fullscreenMode->height};
+        GLint dim[2] = {(GLint)(m_fullscreenMode->width), (GLint)(m_fullscreenMode->height)};
         
         CGLSetParameter(cgcontext, kCGLCPSurfaceBackingSize, dim);
         CGLEnable(cgcontext, kCGLCESurfaceBackingSize);
